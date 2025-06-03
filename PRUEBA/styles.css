@@ -1,0 +1,200 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f7f9fc;
+  color: #333;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Botón para crear nuevo producto */
+a.button {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff !important;
+  border-radius: 5px;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(40, 167, 69, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+a.button:hover {
+  background-color: #218838;
+}
+
+/* Tabla estilizada */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #007bff;
+  color: #fff;
+}
+
+thead th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: #f1f7ff;
+}
+
+tbody td {
+  padding: 12px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Botones de acción dentro de la tabla */
+.action-links a {
+  margin-right: 10px;
+  font-weight: 600;
+  color: #007bff;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.action-links a:hover {
+  color: #0056b3;
+}
+
+/* Formulario */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Botón submit */
+form button[type="submit"] {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 7px rgba(0,123,255,0.4);
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Mensajes de error */
+ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  color: #dc3545;
+  font-weight: 600;
+}
+
+ul li {
+  margin-bottom: 6px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+  }
+
+  tbody td {
+    padding-left: 50%;
+    position: relative;
+    font-size: 0.9rem;
+    text-align: right;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    width: 45%;
+    padding-left: 15px;
+    font-weight: 700;
+    text-align: left;
+    color: #007bff;
+  }
+}
